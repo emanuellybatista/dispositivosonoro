@@ -1,6 +1,6 @@
-//declaracao.criacao da funcao tocaSomPom
+//declaração/criação da função tocaSomPom
 function tocaSomPom(){
-    document.querySelector("som_tecla_pom").play();
+    document.querySelector('#som_tecla_pom').play();
 }
 
 
