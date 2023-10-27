@@ -4,7 +4,7 @@ function tocaSomPom(){
 }
 
 
-//criando areferências constante listaDeTeclas e buscando a tecla
+//criando a referências constante listaDeTeclas e buscando a tecla
 const listaDeTeclas = document.querySelectorAll('.tecla');
                                       
 
