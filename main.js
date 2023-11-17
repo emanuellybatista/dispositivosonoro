@@ -7,15 +7,18 @@ function tocaSom(idElementoAudio){
 //criando a referências constante listaDeTeclas e buscando a tecla
 const listaDeTeclas = document.querySelectorAll('.tecla');
                                       
-
-let contador = 0;
-while(contador < listaDeTeclas.length){
-    const efeito = listaDeTeclas[contador].classList[1];
-    const idAudio = "#Som_" + efeito;
-    listaDeTeclas[contador].onclick = function(){
-        tocaSom(idAudio);
+//criação da repetição "while" trocado pelo "for" com variavel,condição e incremento
+for (let contador = 0; contador <listaDeTeclas.length; contador++){
+    const teclas = listaDeTeclas[contador]; //guarda o contador d lista 
+    const efeito = teclas.classList[1]; //chama o 2º item classe indidual do som
+    const idAudio =  `#Som_${efeito}`; //utiliza a junção template string ${}
+    teclas.onclick = function (){   //função anônima auxiliar para chamar tocaSom
+        tocaSom(idAudio);    //chamada da função  tocaSom com parâmetro idAudio
     }
-    
-    contador = contador + 1;
-    console.log(contador);
-}
+ teclas.onkedydown = function(evento){
+    if (evento.code != 'Tab') {
+        teclas.classList.add('ativa');
+    }
+    teclas.onkeyup = function(){
+        teclas.classList.remove('ativa');
+ }
