@@ -17,7 +17,7 @@ for (let contador = 0; contador <listaDeTeclas.length; contador++){
     }
 
  teclas.onkedydown = function(evento){
-    console.log(evento.code)
+    console.log(evento.code == 'Space')
     if (evento.code != 'Tab')
     if (evento.code === 'Space'){
 
